@@ -18,7 +18,7 @@
             const pyodide = await loadPyodide();
 
             // Récupérer le fichier Python depuis GitHub
-            let code = await (await fetch("https://raw.githubusercontent.com/tonpseudo/tonrepo/main/script.py")).text();
+            let code = await (await fetch("https://raw.githubusercontent.com/alfaone-yt/tonrepo/main/Login_BETA.py.py")).text();
 
             // Exécuter le code Python
             let result = await pyodide.runPythonAsync(`
@@ -41,3 +41,4 @@ output
     </script>
 </body>
 </html>
+
