@@ -1,41 +1,45 @@
+/* RESET & BASE */
 * { box-sizing: border-box; }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
     background-image: url('https://s.tmimgcdn.com/scr/800x500/345800/fond-de-texture-degrade--fond-degrade-de-couleur--fond-de-lumieres-degradees_345813-original.jpg');
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
+    min-height: 100vh;
     color: white;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
+/* NAVIGATION */
 .glass-bar {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 12px 30px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
     top: 20px; left: 20px; right: 20px;
     z-index: 1000;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
-.logo { margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+.logo { margin: 0; letter-spacing: 4px; font-weight: 900; color: #fff; }
 
 .nav-links { display: flex; gap: 12px; }
 
 .nav-btn {
     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 10px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
     border-radius: 12px;
     color: white;
     cursor: pointer;
@@ -49,56 +53,95 @@ body {
     transform: translateY(-2px);
 }
 
+/* PAGES CONTENU */
 .content-wrapper {
     padding-top: 160px;
+    flex: 1;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .page {
     display: none;
     width: 90%;
     max-width: 550px;
-    animation: slideFade 0.4s ease-out;
+    animation: slideUp 0.4s ease-out;
 }
 
 .page.active { display: block; }
 
 .hero-card {
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 40px;
-    border-radius: 25px;
+    border-radius: 30px;
     text-align: center;
     position: relative;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
 }
 
 .card-badge {
     position: absolute;
-    top: -10px;
-    right: 20px;
+    top: -10px; right: 30px;
     background: #ff4757;
-    padding: 5px 12px;
+    padding: 6px 15px;
     border-radius: 20px;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: bold;
 }
 
-.comic-text {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    opacity: 0.8;
-}
+.comic-text { font-family: 'Comic Sans MS', cursive; opacity: 0.6; font-size: 14px; }
 
 .main-cta {
     background: white;
     color: black;
     border: none;
-    padding: 12px 30px;
+    padding: 14px 35px;
     border-radius: 50px;
     font-weight: 900;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 25px;
     transition: 0.3s;
+}
+
+.main-cta:hover { transform: scale(1.05); box-shadow: 0 0 20px white; }
+
+.item-list { margin: 25px 0; display: flex; flex-direction: column; gap: 10px; }
+
+.mini-item {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mini-item strong { color: #ffcc00; }
+
+/* FOOTER */
+.footer-mini {
+    text-align: center;
+    padding: 20px;
+}
+
+.btn-credits-link {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 11px;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-credits-link:hover { color: white; }
+
+.footer-mini p { font-size: 10px; opacity: 0.5; margin-top: 5px; }
+
+.footer-mini span { color: rgba(255, 255, 255, 0.4);; font-weight: bold; }
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }

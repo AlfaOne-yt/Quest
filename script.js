@@ -5,9 +5,14 @@ function showPage(pageId) {
     const btns = document.querySelectorAll('.nav-btn');
     btns.forEach(b => b.classList.remove('active'));
 
-    document.getElementById(pageId).classList.add('active');
-    
-    if (window.event) {
-        window.event.currentTarget.classList.add('active');
+    const target = document.getElementById(pageId);
+    if (target) {
+        target.classList.add('active');
     }
+
+    btns.forEach(b => {
+        if (b.getAttribute('onclick').includes(pageId)) {
+            b.classList.add('active');
+        }
+    });
 }

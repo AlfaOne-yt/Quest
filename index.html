@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quest</title>
+    <title>Quest - Warhdior</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="glass-bar">
-        <h2 class="logo">Quest</h2>
+        <h2 class="logo">QUEST</h2>
         <div class="nav-links">
             <button class="nav-btn active" onclick="showPage('accueil')">Accueil</button>
             <button class="nav-btn" onclick="showPage('boutique')">Boutique</button>
@@ -21,33 +21,60 @@
         
         <section id="accueil" class="page active">
             <div class="hero-card">
-                <div class="card-badge">NOUVEAU</div>
-                <h2 class="Police-1">Warhdior</h2>
+                <div class="card-badge">JEU ACTIF</div>
+                <h2>Warhdior</h2>
                 <h5>Warhdior est un jeu de gestion de royaume inspiré du Moyen Âge. Combattez, défendez, gérez et construisez une seigneurie.</h5>
-                <p class="comic-text">Comic Sans MS</p>
+                <p class="comic-text">Design : Comic Sans MS</p>
                 <button class="main-cta">Jouer maintenant</button>
             </div>
         </section>
 
         <section id="boutique" class="page">
             <div class="hero-card">
-                <h2>Boutique</h2>
+                <h2>Boutique Royale</h2>
                 <div class="item-list">
-                    <div class="mini-item"> -- Indisponible en devlopement-- </div>
+                    <div class="mini-item">  -- Indisponible en devlopement--  </div>
                 </div>
             </div>
         </section>
 
         <section id="casier" class="page">
             <div class="hero-card">
-                <h2>Casier</h2>
+                <h2>Mon Casier</h2>
                 <div class="item-list">
-                    <div class="mini-item"> -- Indisponible en devlopement-- </div>
+                    <div class="mini-item">  -- Indisponible en devlopement--  </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="credits" class="page">
+            <div class="hero-card">
+                <div class="card-badge">ÉQUIPE</div>
+                <h2>Crédits</h2>
+                <div class="item-list">
+                    <div class="mini-item">
+                        <p><strong>DÉVELOPPEMENT</strong></p>
+                        <p>Dark_Bets_ (Dev html & css)</p>
+                    </div>
+                    <div class="mini-item">
+                        <p><strong>DESIGN</strong></p>
+                        <p> xxxx </p>
+                    </div>
+                    <div class="mini-item">
+                        <p><strong>PROJET</strong></p>
+                        <p>Warhdior - Gestion médiévale</p>
+                    </div>
+                </div>
+                <button class="main-cta" onclick="showPage('accueil')">Retour</button>
             </div>
         </section>
 
     </main>
 
+    <footer class="footer-mini">
+        <button class="btn-credits-link" onclick="showPage('credits')">Voir les Crédits</button> <span>| © 2025</span>
+    </footer>
+
     <script src="script.js"></script>
 </body>
+</html>
