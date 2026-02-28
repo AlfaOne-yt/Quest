@@ -1,0 +1,104 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://s.tmimgcdn.com/scr/800x500/345800/fond-de-texture-degrade--fond-degrade-de-couleur--fond-de-lumieres-degradees_345813-original.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+}
+
+.glass-bar {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 20px; left: 20px; right: 20px;
+    z-index: 1000;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.logo { margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+
+.nav-links { display: flex; gap: 12px; }
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 18px;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover, .nav-btn.active {
+    background: white;
+    color: #333;
+    transform: translateY(-2px);
+}
+
+.content-wrapper {
+    padding-top: 160px;
+    display: flex;
+    justify-content: center;
+}
+
+.page {
+    display: none;
+    width: 90%;
+    max-width: 550px;
+    animation: slideFade 0.4s ease-out;
+}
+
+.page.active { display: block; }
+
+.hero-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.card-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: #ff4757;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.comic-text {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    opacity: 0.8;
+}
+
+.main-cta {
+    background: white;
+    color: black;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 900;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
