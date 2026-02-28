@@ -1,1 +1,53 @@
-<h1>Hello Word</h1>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="glass-bar">
+        <h2 class="logo">Quest</h2>
+        <div class="nav-links">
+            <button class="nav-btn active" onclick="showPage('accueil')">Accueil</button>
+            <button class="nav-btn" onclick="showPage('boutique')">Boutique</button>
+            <button class="nav-btn" onclick="showPage('casier')">Casier</button>
+        </div>
+    </nav>
+
+    <main class="content-wrapper">
+        
+        <section id="accueil" class="page active">
+            <div class="hero-card">
+                <div class="card-badge">NOUVEAU</div>
+                <h2 class="Police-1">Warhdior</h2>
+                <h5>Warhdior est un jeu de gestion de royaume inspiré du Moyen Âge. Combattez, défendez, gérez et construisez une seigneurie.</h5>
+                <p class="comic-text">Comic Sans MS</p>
+                <button class="main-cta">Jouer maintenant</button>
+            </div>
+        </section>
+
+        <section id="boutique" class="page">
+            <div class="hero-card">
+                <h2>Boutique</h2>
+                <div class="item-list">
+                    <div class="mini-item"> -- Indisponible en devlopement-- </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="casier" class="page">
+            <div class="hero-card">
+                <h2>Casier</h2>
+                <div class="item-list">
+                    <div class="mini-item"> -- Indisponible en devlopement-- </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
